@@ -6,19 +6,26 @@ class Bible
 
   def book_list
     response = self.class.get("/library/bookorder", query: standard_params)
-    puts response.parsed_response
+    build_response(response)
   end
 
   def verse(book=nil, chapter=nil, verse=nil) 
     response = self.class.get("/text/verse", query: standard_params.merge({
-                                      book_id: "Gen",
-                                      chapter_id: "4",
-                                      verse_start: "7"}) )    
-    puts response.parsed_response
+                                      book_id: book,
+                                      chapter_id: chapter,
+                                      verse_start: verse}) )    
+    response = build_response(response)
+    response.first['verse_text']
   end
 
 
   private 
+
+  # TODO: convert keys to symbols, for now strings is fine
+  def build_response(response) 
+    response.parsed_response
+  end
+
   # TODO: Make into config block
   def standard_params
     { key: ENV["BIBLE_API_KEY"],

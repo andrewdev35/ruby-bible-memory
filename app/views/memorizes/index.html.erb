@@ -1,0 +1,8 @@
+<h3>Choose a verse to Memorize</h3>
+
+<%= simple_form_for @memorize do |f| %>
+  <%= f.select :book, collection: @books  %>
+  <%= f.input :chapter %>
+  <%= f.input :verse %>
+  <%= f.button :submit %>
+<% end %>
