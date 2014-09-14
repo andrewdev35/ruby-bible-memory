@@ -9,6 +9,7 @@ gem 'httparty'
 gem 'bootstrap-sass'
 gem 'simple_form', '>= 3.1.0.rc1'
 gem 'jquery-ui-rails'
+gem 'rails_12factor'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
