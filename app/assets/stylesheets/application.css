@@ -37,3 +37,14 @@
   cursor: hand;
 }
 
+.match {
+  font-size: 25px;
+  padding: 5px;
+  margin: 15px;
+  line-height: 75px;  
+  font-family: monospace;
+  cursor: hand;
+  border: 4px solid olive;
+  background-color: green;  
+}
+

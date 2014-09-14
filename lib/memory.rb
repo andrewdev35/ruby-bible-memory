@@ -15,8 +15,10 @@ class Memory
   def self.verse_place(text)
     words = text.gsub(/\w/, "_").split("\s")
     output = []
+    count = 1
     words.each_slice(3).each do |set|
-      output.push("<span class='place'>" << set.join("&nbsp;")<< "</span>")
+      output.push("<span class='place' data-id='#{count}'>" << set.join("&nbsp;")<< "</span>")
+      count += 1
     end
     output.join(" ")
   end
@@ -24,8 +26,10 @@ class Memory
   def self.verse_pieces(text)
     words = text.split("\s")
     output = []
+    count = 1
     words.each_slice(3).each do |set|
-      output.push("<span class='drag'>" << set.join("&nbsp;")<< "</span>")
+      output.push("<span class='drag' data-id='#{count}'>" << set.join("&nbsp;")<< "</span>")
+      count += 1
     end
     output.shuffle.join(" ")
   end

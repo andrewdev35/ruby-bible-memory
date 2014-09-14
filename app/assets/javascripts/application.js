@@ -19,12 +19,22 @@
 
   $(function() {
     $( "#verse span.drag" ).draggable();
-    $( "#droppable" ).droppable({
+    $( "span.place" ).droppable({
       drop: function( event, ui ) {
-        $( this )
-          .addClass( "ui-state-highlight" )
-          .find( "p" )
-            .html( "Dropped!" );
+        $( this );
+        place_value = this.attributes['data-id'].value;
+        drag_value = ui.draggable[0]["attributes"][1]["value"];
+        console.log("place: " + place_value + " drag: " + drag_value);   
+        if (place_value == drag_value) {
+          $(ui.draggable).attr("class", "match");
+     // $(this).attr("class", "").addClass( $(ui.draggable).attr("class") );
+        }
+        console.log(this.attributes['data-id']);
+        console.log(ui.draggable);
+        console.log();     
+         // .addClass( "ui-state-highlight" )
+         // .find( "p" )
+         //   .html( "Dropped!" );
       }
     });
   });
