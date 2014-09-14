@@ -3,12 +3,13 @@
   
   <head>
     <title>BibleMemory</title>
-    <%= stylesheet_link_tag    'application', 'bootstrap', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    'application', 'http://bootswatch.com/readable/bootstrap.min.css', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'bootstrap', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
+    <%= render "/shared/navigation" %>
     <div class="container" style="margin-top: 50px;">
       <%= yield %>
     </div>
