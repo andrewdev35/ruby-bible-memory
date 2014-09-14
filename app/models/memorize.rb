@@ -1,5 +1,5 @@
 class Memorize
- extend ActiveModel::Naming
+  extend ActiveModel::Naming
   include ActiveModel::Conversion
 
   attr_accessor :book, :chapter, :verse, :text 
@@ -9,7 +9,7 @@ class Memorize
     @chapter = chapter
     @verse = verse 
     lookup unless book.nil?
-  end
+  end 
 
   def persisted?
     false

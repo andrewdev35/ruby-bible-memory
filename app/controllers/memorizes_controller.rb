@@ -1,4 +1,5 @@
 require 'bible'
+require 'memory'
 
 class MemorizesController < ApplicationController
 
@@ -10,6 +11,9 @@ class MemorizesController < ApplicationController
   def create
     verse = params[:memorize]
     @memorize = Memorize.new(verse[:book], verse[:chapter], verse[:verse])
-    render text: @memorize.text
+    @place = Memory.verse_place(@memorize.text)
+
+    @verse = Memory.verse_pieces(@memorize.text)
+    render :show
   end
 end

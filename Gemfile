@@ -7,7 +7,8 @@ gem 'rails', '4.1.5'
 gem 'pg'
 gem 'httparty'
 gem 'bootstrap-sass'
-gem 'simple_form'
+gem 'simple_form', '>= 3.1.0.rc1'
+gem 'jquery-ui-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
