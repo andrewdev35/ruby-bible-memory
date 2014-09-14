@@ -9,7 +9,12 @@ class Memory
   end
  
   def self.shuffle_each_word(text, before="", after="")
-    text.split("\s").shuffle.map { |w| "#{before}#{w}#{after}" }.join(" ")
+    text.split(/\s/).shuffle.map { |w| "#{before}#{w}#{after}" }.join(" ")
+  end
+
+  def self.firsts(text)
+    letters = text.split(/\s/).collect { |e| e.match(/(\w){1}/)[0] }
+    letters.join(" ")
   end
 
   def self.verse_place(text)

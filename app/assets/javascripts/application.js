@@ -17,8 +17,6 @@
 //= require_tree .
 
 
-window.total = $('.place').length;
-
   $(function() {
     $( "#verse span.drag" ).draggable();
     $( "span.place" ).droppable({
@@ -29,7 +27,7 @@ window.total = $('.place').length;
           $(ui.draggable).attr("class", "match");
           //console.log($(ui.draggable).attr('data-id'));
           if ($(".match").length == $('.place').length) {
-            alert("Horray!!");
+            alert("Horray!!");  
           }
         }
       }
