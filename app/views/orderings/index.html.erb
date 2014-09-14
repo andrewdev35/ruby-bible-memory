@@ -6,10 +6,7 @@
       </div>
       <div class="panel-body">
         <%= simple_form_for @ordering, url: "/orderings", html: {role: 'form', class: 'form-horizontal'}  do |f| %>
-          <%= f.input :book, collection: @books %>
-          <%= f.input :chapter %>
-          <%= f.input :verse %>
-          <%= f.button :submit %>
+          <%= render '/shared/form', {f: f} %>
         <% end %>
       </div>
     </div>
