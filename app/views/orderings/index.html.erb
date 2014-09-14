@@ -5,7 +5,7 @@
         <h3>Choose a verse to Memorize</h3>
       </div>
       <div class="panel-body">
-        <%= simple_form_for @memorize, html: {role: 'form', class: 'form-horizontal'}  do |f| %>
+        <%= simple_form_for @ordering, url: "/orderings", html: {role: 'form', class: 'form-horizontal'}  do |f| %>
           <%= f.input :book, collection: @books %>
           <%= f.input :chapter %>
           <%= f.input :verse %>

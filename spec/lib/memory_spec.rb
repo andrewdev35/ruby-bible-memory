@@ -14,10 +14,7 @@ describe Memory do
     words.each_slice(3).each do |set|
       output.push set.join("&nbsp;")
     end
-    output.join(" ")
-    require 'debugger'
-    debugger
-    1 == 1
+
   end 
 
 end
