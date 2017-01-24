@@ -4,6 +4,7 @@ This used a Bible API to retrieve a verse and show it in two ways:
 
 First letter of each word, used to add in memorization.
 
-Verse broke into chunks and scrambled. Using drag and drop to reorder it.
+Verse broken into chunks and scrambled. Using drag and drop to reorder it.
 
+Bible API from http://dbt.io/ 
 
